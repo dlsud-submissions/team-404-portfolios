@@ -1,0 +1,287 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   THEME (Team 404: black + neon blue)
+========================= */
+:root {
+  --bg: #05070a;
+  --panel: #0d141f;
+  --accent: #29b6f6;
+  --accent-soft: rgba(41, 182, 246, 0.16);
+  --text: #f2f6fa;
+  --muted: #93a4b8;
+  --border: rgba(41, 182, 246, 0.3);
+}
+
+body {
+  font-family: "Consolas", "Courier New", monospace;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* =========================
+   LAYOUT HELPERS
+========================= */
+.section {
+  padding: 48px 6%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: #05070a;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+}
+
+/* =========================
+   HEADER
+========================= */
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 6%;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+}
+
+.hero-greeting {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.hero-name {
+  margin: 8px 0;
+  font-size: 2.2rem;
+  color: var(--accent);
+}
+
+.hero-role {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.hero-summary {
+  max-width: 480px;
+  margin: 16px auto 0;
+  color: var(--muted);
+}
+
+.hero-image img {
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 32px var(--accent-soft);
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.about-content p {
+  margin-bottom: 18px;
+  color: var(--muted);
+}
+
+/* =========================
+   SKILLS
+========================= */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.skill-card {
+  padding: 18px;
+  text-align: center;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.project-card {
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 18px;
+}
+
+.project-info h3 {
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+
+.project-info p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact-card {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  padding: 32px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.contact-card p {
+  color: var(--muted);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+  padding: 24px 6%;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+/* =========================
+   MOBILE FIRST BREAKPOINTS
+========================= */
+/* Tablet */
+@media (min-width: 600px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+
+  .hero-summary {
+    margin-left: 0;
+  }
+
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop and above */
+@media (min-width: 1024px) {
+  .section {
+    padding: 72px 10%;
+  }
+
+  .hero-name {
+    font-size: 3rem;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
