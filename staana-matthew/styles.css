@@ -215,6 +215,25 @@ ul {
   font-size: 0.95rem;
 }
 
+.project-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.project-link {
+  padding: 6px 14px;
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.project-link:hover {
+  background: var(--accent-soft);
+}
+
 /* =========================
    CONTACT
 ========================= */
