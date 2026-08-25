@@ -10,12 +10,19 @@
 :root {
   --blue-dark: #0b2b44;
   --blue-primary: #1a5276;
+  --blue-primary-rgb: 26, 82, 118;
   --blue-mid: #2e86c1;
   --blue-light: #5dade2;
   --blue-pale: #d6eaf8;
   --silver-dark: #7f8c8d;
   --white: #ffffff;
-  --shadow: 0 16px 40px rgba(26, 82, 118, 0.14);
+  --bg-page: #eef2f7;
+  --text-body: #1e2a3a;
+  --text-muted: #2c3e50;
+  --shadow: 0 16px 40px rgba(var(--blue-primary-rgb), 0.14);
+  --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.05);
+  --shadow-image: 0 10px 28px rgba(var(--blue-primary-rgb), 0.22);
+  --shadow-gallery: 0 4px 14px rgba(var(--blue-primary-rgb), 0.12);
   --transition: 0.3s ease;
 }
 
@@ -29,14 +36,14 @@ body {
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
-  background: #eef2f7;
-  color: #1e2a3a;
+  background: var(--bg-page);
+  color: var(--text-body);
   line-height: 1.6;
 }
 
 .container {
   max-width: 100%;
-  background: #ffffff;
+  background: var(--white);
   box-shadow: var(--shadow);
   padding: 1.5rem 1.25rem;
   animation: fade-in 0.6s ease-out;
@@ -79,7 +86,7 @@ h2.centered {
 }
 
 p {
-  color: #2c3e50;
+  color: var(--text-muted);
   max-width: 65ch;
 }
 
@@ -183,6 +190,7 @@ a:hover {
 }
 
 .hero-content h1 .highlight {
+  display: block;
   background: linear-gradient(135deg, var(--blue-primary), var(--blue-light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -205,7 +213,7 @@ a:hover {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 10px 28px rgba(26, 82, 118, 0.22);
+  box-shadow: var(--shadow-image);
   border: 4px solid var(--white);
   transition: transform 0.4s ease;
 }
@@ -312,7 +320,7 @@ a:hover {
   height: auto;
   border-radius: 12px;
   display: block;
-  box-shadow: 0 4px 14px rgba(26, 82, 118, 0.12);
+  box-shadow: var(--shadow-gallery);
   transition: transform var(--transition);
 }
 
@@ -345,7 +353,7 @@ a:hover {
   background: var(--white);
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-soft);
   text-align: center;
   padding-bottom: 1.2rem;
   transition:
