@@ -285,6 +285,84 @@ a:hover {
   margin-bottom: 0.4rem;
 }
 
+/* Why Hire Me */
+.credentials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.credential-card {
+  background: var(--white);
+  border: 1px solid var(--blue-pale);
+  padding: 1.5rem;
+  border-radius: 14px;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.credential-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.credential-card i {
+  color: var(--blue-mid);
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+  display: inline-block;
+}
+
+.credential-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.hire-summary {
+  margin: 1.8rem auto 0;
+  text-align: center;
+}
+
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.testimonial-card {
+  background: var(--blue-pale);
+  padding: 1.6rem;
+  border-radius: 14px;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.testimonial-card i {
+  color: var(--blue-mid);
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  display: inline-block;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  margin-bottom: 0.8rem;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: var(--blue-primary);
+}
+
 /* Hobbies */
 .hobbies-grid {
   display: grid;
@@ -416,6 +494,14 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .credentials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .hobbies-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -452,6 +538,18 @@ a:hover {
 
   .about-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .credentials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hire-summary {
+    max-width: 65ch;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .hobbies-grid {
@@ -522,6 +620,20 @@ a:hover {
 
   .about-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .credentials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .hire-summary {
+    max-width: 70ch;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
 
