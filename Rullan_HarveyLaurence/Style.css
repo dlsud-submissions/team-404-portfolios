@@ -285,6 +285,54 @@ a:hover {
   margin-bottom: 0.4rem;
 }
 
+/* Projects */
+.featured-project {
+  background: var(--blue-pale);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.featured-project h3 {
+  margin-bottom: 0.5rem;
+}
+
+.featured-project > p {
+  margin-bottom: 1.8rem;
+}
+
+.featured-project-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+.featured-project-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 4px 14px rgba(26, 82, 118, 0.12);
+  transition: transform var(--transition);
+}
+
+.featured-project-gallery img:hover {
+  transform: scale(1.03);
+}
+
+.project-badge {
+  display: inline-block;
+  background: var(--blue-mid);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.7rem;
+  border-radius: 50px;
+  margin-bottom: 0.6rem;
+}
+
 /* Hobbies */
 .hobbies-grid {
   display: grid;
@@ -454,6 +502,10 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .featured-project-gallery {
+    gap: 1.5rem;
+  }
+
   .hobbies-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -523,6 +575,14 @@ a:hover {
   .about-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+
+  .featured-project {
+    padding: 2.5rem;
+  }
+
+  .featured-project-gallery {
+    gap: 1.8rem;
   }
 
   .hobbies-grid {
