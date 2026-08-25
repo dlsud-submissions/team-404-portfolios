@@ -15,9 +15,22 @@
     --shadow: 0 18px 45px rgba(232, 95, 143, 0.16);
     --shadow-soft: 0 10px 28px rgba(232, 95, 143, 0.11);
     --hero-gradient:
-        radial-gradient(circle at top left, rgba(255, 130, 177, 0.28), transparent 30%),
-        radial-gradient(circle at right, rgba(255, 210, 227, 0.62), transparent 28%),
-        linear-gradient(145deg, #fff8fb 0%, #ffe8f2 42%, #fff2f7 100%);
+        radial-gradient(
+            circle at top left,
+            rgba(255, 130, 177, 0.28),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at right,
+            rgba(255, 210, 227, 0.62),
+            transparent 28%
+        ),
+        linear-gradient(
+            145deg,
+            #fff8fb 0%,
+            #ffe8f2 42%,
+            #fff2f7 100%
+        );
 }
 
 [data-theme="dark"] {
@@ -33,9 +46,22 @@
     --shadow: 0 20px 45px rgba(255, 93, 150, 0.18);
     --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.28);
     --hero-gradient:
-        radial-gradient(circle at top left, rgba(255, 93, 150, 0.24), transparent 32%),
-        radial-gradient(circle at right, rgba(255, 134, 175, 0.16), transparent 26%),
-        linear-gradient(145deg, #220f1d 0%, #170b13 58%, #2a1323 100%);
+        radial-gradient(
+            circle at top left,
+            rgba(255, 93, 150, 0.24),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at right,
+            rgba(255, 134, 175, 0.16),
+            transparent 26%
+        ),
+        linear-gradient(
+            145deg,
+            #220f1d 0%,
+            #170b13 58%,
+            #2a1323 100%
+        );
 }
 
 * {
@@ -847,7 +873,7 @@ textarea {
     mix-blend-mode: soft-light;
 }
 
-.bg-blobs .b1 {
+.bg-blobs .blob-top-left {
     width: 520px;
     height: 520px;
     left: -10%;
@@ -856,7 +882,7 @@ textarea {
     animation: float-1 18s ease-in-out infinite;
 }
 
-.bg-blobs .b2 {
+.bg-blobs .blob-top-right {
     width: 360px;
     height: 360px;
     right: -6%;
@@ -865,7 +891,7 @@ textarea {
     animation: float-2 22s ease-in-out infinite;
 }
 
-.bg-blobs .b3 {
+.bg-blobs .blob-bottom-left {
     width: 420px;
     height: 420px;
     left: 20%;
@@ -874,7 +900,7 @@ textarea {
     animation: float-3 25s ease-in-out infinite;
 }
 
-.bg-blobs .b4 {
+.bg-blobs .blob-bottom-right {
     width: 240px;
     height: 240px;
     right: 18%;

@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const MIN_MESSAGE_LENGTH = 10;
     const HEADER_OFFSET = 110;
     const SCROLL_DURATION_MS = 650;
+    const THEME_STORAGE_KEY = 'portfolio-theme';
+    const THEME_LIGHT = 'light';
+    const THEME_DARK = 'dark';
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -40,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const projects = [
         {
             title: 'Chill Shooters Airsoft Gaming Center',
-            image: 'airsoft-pic.png',
+            image: 'asset/airsoft-pic.png',
             summary: 'A management system for Chill Shooters Airsoft Gaming Center.',
             description: 'This is our client\'s first project, a management system for their airsoft gaming center. It includes features for booking, inventory management, and customer tracking. The design focuses on a clean interface with intuitive navigation to enhance user experience.',
             tags: ['UI Design', 'Dashboard'],
@@ -48,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             title: 'CodeVault',
-            image: 'codevault-pic.jpg',
+            image: 'asset/codevault-pic.jpg',
             summary: 'A website to store and download existing code snippets.',
             description: 'CodeVault is a web application that allows users to store, manage, and download code snippets. It features a user-friendly interface with categorization and search functionality, making it easy for developers to organize their code. The design emphasizes clarity and accessibility, ensuring that users can quickly find and utilize their stored code.',
             tags: ['Code', 'Storage', 'UI Design'],
@@ -56,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             title: 'DLSU-D GPA Calculator',
-            image: 'dlsudcalc-pic.png',
+            image: 'asset/dlsudcalc-pic.png',
             summary: 'A simple GPA calculator for DLSU-D students.',
             description: 'The DLSU-D GPA Calculator is a straightforward tool for students to compute their cumulative GPA based on their grades. It features a clean interface with easy-to-use input fields and real-time calculation updates.',
             tags: ['Calculator', 'Education'],
@@ -65,9 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const sliderMedia = [
-        { src: 'airsoft-vid.mp4', title: 'Airsoft Project' },
-        { src: 'codevault-vid.mp4', title: 'CodeVault Project' },
-        { src: 'dlsudcalc-vid.mp4', title: 'DLSUD Calculator Project' },
+        { src: 'asset/airsoft-vid.mp4', title: 'Airsoft Project' },
+        { src: 'asset/codevault-vid.mp4', title: 'CodeVault Project' },
+        { src: 'asset/dlsudcalc-vid.mp4', title: 'DLSUD Calculator Project' },
     ];
     let slideIndex = 0;
     let slideInterval = null;
@@ -113,19 +116,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    const savedTheme = localStorage.getItem('portfolio-theme');
+    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
 
-    if (savedTheme === 'dark') {
-        body.dataset.theme = 'dark';
+    if (savedTheme === THEME_DARK) {
+        body.dataset.theme = THEME_DARK;
         themeToggle.setAttribute('aria-pressed', 'true');
         themeIcon.classList.replace('fa-moon', 'fa-sun');
-    } else if (savedTheme === 'light') {
+    } else if (savedTheme === THEME_LIGHT) {
         delete body.dataset.theme;
         themeToggle.setAttribute('aria-pressed', 'false');
         themeIcon.classList.replace('fa-sun', 'fa-moon');
     } else {
         delete body.dataset.theme;
-        localStorage.setItem('portfolio-theme', 'light');
+        localStorage.setItem(THEME_STORAGE_KEY, THEME_LIGHT);
     }
 
     const renderProjects = () => {
@@ -308,20 +311,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     themeToggle.addEventListener('click', () => {
-        const isDark = body.dataset.theme === 'dark';
+        const isDark = body.dataset.theme === THEME_DARK;
 
         if (isDark) {
             delete body.dataset.theme;
             themeToggle.setAttribute('aria-pressed', 'false');
             themeIcon.classList.replace('fa-sun', 'fa-moon');
-            localStorage.setItem('portfolio-theme', 'light');
+            localStorage.setItem(THEME_STORAGE_KEY, THEME_LIGHT);
             return;
         }
 
-        body.dataset.theme = 'dark';
+        body.dataset.theme = THEME_DARK;
         themeToggle.setAttribute('aria-pressed', 'true');
         themeIcon.classList.replace('fa-moon', 'fa-sun');
-        localStorage.setItem('portfolio-theme', 'dark');
+        localStorage.setItem(THEME_STORAGE_KEY, THEME_DARK);
     });
 
     prevSlide.addEventListener('click', () => resetAutoSlides(slideIndex - 1));

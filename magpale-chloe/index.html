@@ -6,21 +6,31 @@
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0">
-    <title>Precious Chloe Magpale | Portfolio</title>
+    <title>Chloe Magpale | Portfolio</title>
     <meta
         name="description"
-        content="Portfolio of Precious Chloe Magpale — front-end development, UI design, and creative projects.">
+        content="Front-end development, UI design, and creative projects by Chloe Magpale.">
     <meta name="theme-color" content="#fff0f6">
     <meta
         property="og:title"
         content="Precious Chloe Magpale — Portfolio">
     <meta
         property="og:description"
-        content="Front-end developer and design-minded student building responsive and polished web experiences.">
-    <meta property="og:image" content="pic.png">
-    <link rel="icon" href="pic.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+        content="Front-end developer and design-minded student building responsive and polished web
+            experiences.">
+    <meta
+        property="og:image"
+        content="asset/pic.png">
+    <link
+        rel="icon"
+        href="asset/pic.png"
+        type="image/png">
+    <link
+        rel="stylesheet"
+        href="style.css">
+    <script
+        src="script.js"
+        defer></script>
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -28,10 +38,10 @@
 
 <body>
     <div class="bg-blobs" aria-hidden="true">
-        <span class="blob b1"></span>
-        <span class="blob b2"></span>
-        <span class="blob b3"></span>
-        <span class="blob b4"></span>
+        <span class="blob blob-top-left"></span>
+        <span class="blob blob-top-right"></span>
+        <span class="blob blob-bottom-left"></span>
+        <span class="blob blob-bottom-right"></span>
     </div>
     <a class="skip-link" href="#main_content">Skip to content</a>
 
@@ -109,7 +119,9 @@
 
             <div class="hero-visual">
                 <div class="portrait-frame">
-                    <img src="pic.png" alt="Portrait of Precious Chloe Magpale">
+                    <img
+                        src="asset/pic.png"
+                        alt="Portrait of Precious Chloe Magpale">
                 </div>
             </div>
         </section>
@@ -191,10 +203,18 @@
                         aria-label="Featured project video"></video>
                 </div>
                 <div class="slider-controls">
-                    <button class="icon-button" type="button" id="prev_slide" aria-label="Previous video">
+                    <button
+                        class="icon-button"
+                        type="button"
+                        id="prev_slide"
+                        aria-label="Previous video">
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
-                    <button class="icon-button" type="button" id="next_slide" aria-label="Next video">
+                    <button
+                        class="icon-button"
+                        type="button"
+                        id="next_slide"
+                        aria-label="Next video">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
@@ -235,7 +255,11 @@
 
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Write your message here"></textarea>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Write your message here"></textarea>
                         <small class="error" id="message_error"></small>
                     </div>
 
@@ -252,10 +276,17 @@
 
     <div class="modal" id="project_modal" aria-hidden="true">
         <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal_title">
-            <button class="icon-button modal-close" type="button" id="close_modal" aria-label="Close project details">
+            <button
+                class="icon-button modal-close"
+                type="button"
+                id="close_modal"
+                aria-label="Close project details">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <img id="modal_image" src="" alt="Project detail preview">
+            <img
+                id="modal_image"
+                src="asset/pic.png"
+                alt="Project detail preview">
             <h3 id="modal_title"></h3>
             <p id="modal_description"></p>
             <ul id="modal_details"></ul>
