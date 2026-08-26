@@ -227,7 +227,9 @@ section h2 {
   font-weight: 600;
   text-decoration: none;
   box-shadow: 0 3px 8px rgba(77, 58, 47, 0.25);
-  transition: background-color 0.3s, transform 0.3s;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
 }
 
 .back-to-top:hover {
