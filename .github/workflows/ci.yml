@@ -7,7 +7,8 @@ on:
     branches: [main]
 
 jobs:
-  lint-and-format:
+  prettier:
+    name: Prettier check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -19,8 +20,19 @@ jobs:
 
       - run: npm ci
 
-      - name: Prettier check
-        run: npm run format:check
+      - run: npm run format:check
 
-      - name: ESLint check
-        run: npm run lint
+  eslint:
+    name: ESLint check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run lint
