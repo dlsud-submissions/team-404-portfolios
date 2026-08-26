@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f8f3ee;
@@ -209,6 +213,41 @@ section h2 {
 
 .testimonial-card p {
   font-size: 14px;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 10;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: #a5643e;
+  color: #fffaf6;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 3px 8px rgba(77, 58, 47, 0.25);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: #885437;
+  transform: translateY(-2px);
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid #99765b;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .back-to-top {
+    transition: none;
+  }
 }
 
 /* Mobile Small */
