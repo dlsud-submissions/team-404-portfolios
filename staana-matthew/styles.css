@@ -235,6 +235,38 @@ ul {
 }
 
 /* =========================
+   TESTIMONIALS
+========================= */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.testimonial-card {
+  padding: 24px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.testimonial-quote {
+  margin-bottom: 16px;
+  color: var(--text);
+  font-style: italic;
+}
+
+.testimonial-name {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.testimonial-role {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* =========================
    CONTACT
 ========================= */
 .contact-card {
@@ -288,6 +320,10 @@ ul {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Laptop and above */
@@ -302,5 +338,9 @@ ul {
 
   .project-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
